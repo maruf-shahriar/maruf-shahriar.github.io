@@ -78,3 +78,49 @@ i {
     max-width: 85%;
     margin-top: 10em;
 }
+
+/* Media queries for tablet screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rightInfo {
+        max-width: 80vw;
+        margin-left: 0;
+    }
+
+    .leftImage {
+        max-width: 80vw;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+/* Media queries for mobile screens */
+@media (max-width: 480px) {
+    #header {
+        font-size: 40px;
+    }
+
+    .aboutInfo {
+        font-size: 20px;
+        max-width: 90%;
+        margin-top: -0.5em;
+        margin-bottom: -0.5em;
+    }
+
+    .icons {
+        margin-top: 2em;
+    }
+
+    button {
+        font-size: 20px;
+        margin-top: 2em;
+    }
+
+    i {
+        margin-right: 15px;
+    }
+}
