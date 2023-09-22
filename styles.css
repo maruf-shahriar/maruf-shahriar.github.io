@@ -78,6 +78,10 @@ i {
     max-width: 85%;
     margin-top: 10em;
 }
+.notification{
+    margin-top: 1em;
+    margin-left: 9em;
+}
 
 /* Media queries for tablet screens */
 @media (max-width: 768px) {
@@ -94,8 +98,15 @@ i {
     .leftImage {
         max-width: 50vw;
         margin-right: 0;
-        margin-left: 0;
-        margin-top: -8em;
+        margin-left: -60px;
+        margin-top: 0em;
+    }
+    #image {
+        margin-top: 1em;
+    }
+    .notification {
+        margin-top: 1em;
+        margin-left: 9em;
     }
 }
 
@@ -111,6 +122,9 @@ i {
         margin-top: -0.5em;
         margin-bottom: -0.5em;
     }
+    .leftImage {
+        margin-left: -15px;
+    }
 
     .icons {
         margin-top: 2em;
@@ -123,5 +137,9 @@ i {
 
     i {
         margin-right: 15px;
+    }
+    .notification {
+        margin-top: 1em;
+        margin-left: 5em;
     }
 }

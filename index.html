@@ -52,7 +52,7 @@
                             ></i
                         ></a>
 
-                        <a href="mailto:mrfshahriar@gmail.com"
+                        <a href="mailto:mrfshahriar@gmail.com" id="emailLink"
                             ><i
                                 class="fas fa-envelope fa-3x"
                                 aria-hidden="true"
@@ -60,11 +60,48 @@
                         ></a>
                     </div>
                 </div>
+                
             </section>
 
             <section class="leftImage">
                 <img id="image" src="assets/pic.jpg" alt="No Photo Available" />
             </section>
+           
         </section>
+        <div class="notification" id="copyNotification" style="display: none">
+            Email address copied to clipboard!
+        </div>
+        <script>
+            document
+                .getElementById("emailLink")
+                .addEventListener("click", function (event) {
+                    event.preventDefault(); // Prevent the default mailto link behavior
+                    const email = this.getAttribute("href").replace(
+                        "mailto:",
+                        ""
+                    ); // Extract the email address
+                    copyToClipboard(email); // Call the copyToClipboard function to copy the email address
+                });
+
+            // Function to copy text to the clipboard
+            function copyToClipboard(text) {
+                const textarea = document.createElement("textarea");
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+
+                // Show the notification message
+                const copyNotification =
+                    document.getElementById("copyNotification");
+                copyNotification.style.display = "block";
+
+                // Hide the notification after a brief delay (e.g., 2 seconds)
+                setTimeout(function () {
+                    copyNotification.style.display = "none";
+                }, 2000); // 2000 milliseconds = 2 seconds
+            }
+        </script>
     </body>
 </html>
