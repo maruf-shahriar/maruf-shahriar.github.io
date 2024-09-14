@@ -1,6 +1,7 @@
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+    background-color: #141b1c;
 }
 
 .container {
@@ -19,6 +20,7 @@ body {
 
 #header {
     font-size: 60px;
+    color: white;
 }
 
 .aboutInfo {
@@ -29,10 +31,12 @@ body {
     max-width: 70%;
     margin-top: -1em;
     margin-bottom: -1em;
+    color: white;
 }
 
 .icons {
     margin-top: 3em;
+    color: white;
 }
 
 .leftImage {
@@ -50,10 +54,10 @@ i:hover {
 
 button {
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 25px;
-    color: white;
-    background-color: #222121;
+    color: black;
+    background-color: white;
     padding: 0.4em;
     padding-left: 1.5em;
     padding-right: 1.5em;
@@ -77,8 +81,9 @@ i {
 #image {
     max-width: 85%;
     margin-top: 10em;
+    border-radius: 15px;
 }
-.notification{
+.notification {
     margin-top: 1em;
     margin-left: 9em;
 }
@@ -141,6 +146,5 @@ i {
     .notification {
         margin-top: 1em;
         margin-left: 0em;
-        
     }
 }
