@@ -37,9 +37,9 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#Research">Reasearch</a></li>
                 </ul>
             </nav>
         </header>
@@ -168,8 +168,161 @@
                     </div>
                 </div>
             </section>
+            <section id="projects">
+                <h1 class="title">Projects</h1>
+                <div class="project-card">
+                    <div class="project">
+                        <h3 class="project-title">
+                            Learning Management system
+                        </h3>
+                        <h4>Technologies: ReactJS, Django, Tailwind CSS</h4>
+                        <p class="project-desc">
+                            Designed an e-learning platform with multimedia
+                            content, automated grading, instant feedback, and
+                            interactive discussion forums. Implemented secure
+                            user authentication for personalized access.
+                        </p>
+                        <div class="p-btn">
+                            <a
+                                href="https://learncs-app.web.app/"
+                                target="_blank"
+                                class="project-link"
+                                >Live View</a
+                            >
+                            <a
+                                href="https://github.com/maruf-shahriar/LearnCS-Frontend"
+                                target="_blank"
+                                class="project-link"
+                                >Github</a
+                            >
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3 class="project-title">Hotel Management system</h3>
+                        <h4>
+                            Technologies: Tailwind, JavaScript, ReactJS, NodeJS
+                        </h4>
+                        <p class="project-desc">
+                            Developed a hotel booking system enabling guests to
+                            reserve rooms online. Automated bill generation,
+                            including room charges, taxes, and additional
+                            services. Implemented features for generating
+                            financial reports and monitoring room occupancy.
+                        </p>
+                        <div class="p-btn">
+                            <a href="" target="_blank" class="project-link"
+                                >Live View</a
+                            >
+                            <a
+                                href="https://github.com/maruf-shahriar/HotelManagementSystem"
+                                target="_blank"
+                                class="project-link"
+                                >Github</a
+                            >
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3 class="project-title">
+                            Public key Infrastructure Implementation
+                        </h3>
+                        <h4>
+                            Technologies: Ubuntu, Apache Web Server, Bind9,
+                            Snort
+                        </h4>
+                        <p class="project-desc">
+                            Built a web and DNS server to host multiple
+                            websites. Configured SSL certificates for secure
+                            connections and implemented robust security measures
+                            to protect the server from potential attacks.
+                        </p>
+                        <div class="p-btn">
+                            <a
+                                href="      "
+                                target="_blank"
+                                class="project-link"
+                                >Live View</a
+                            >
+                            <a
+                                href="https://github.com/maruf-shahriar/Public-Key-Infrastructure-Implementation"
+                                target="_blank"
+                                class="project-link"
+                                >Github</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="education">
+                <h1 class="title">Education</h1>
+                <div class="edu-desc">
+                    <h2>
+                        Bachelor of Science in Computer Science and Engineering
+                    </h2>
+                    <img src="assets/EWULogo.png" alt="East West University" />
+                    <p>East West University, 2020 - 2023</p>
+                </div>
+            </section>
+            <section id="Research">
+                <h1 class="title">Research</h1>
+                <h3>Research Interests</h3>
+                <ul class="r-list">
+                    <li>Machine Learning</li>
+                    <li>Natural Language Processing</li>
+                    <li>Software Engineering</li>
+                    <li>Networking</li>
+                    <li>Cybersecurity</li>
+                </ul>
+                <h3>Reasearch Paper</h3>
+                <div class="research-card">
+                    <div class="project">
+                        <h3 class="research-title">
+                            Text Summarization and Neural Machine Translation
+                        </h3>
+                        <h4>
+                            Md. Maruf Shahriar, Kasif Hasnaen Zisan, Rifa Tasnim
+                            Orin, Noushin Pervez
+                        </h4>
+                        <p class="research-desc">
+                            Deep Learning-Based Bilingual Text Summarization and
+                            Neural Machine Translation for Finance and Economics
+                            News
+                        </p>
+                        <div class="r-btn">
+                            <a
+                                href=""
+                                target="_blank"
+                                class="research-link"
+                                >View</a
+                            >
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3 class="research-title">
+                            Deep Learning-based Classification of Liver Cells
+                        </h3>
+                        <h4>
+                            Kasif Hasnaen Zisan, S.M. Raduan, Md. Maruf
+                            Shahriar, Rifa Tasnim Orin, Ahmed Wasif Reza
+                        </h4>
+                        <p class="research-desc">
+                            Deep Learning-based Classification of Liver Cells
+                            using Mask R-CNN on Whole Slide Images
+                        </p>
+                        <div class="r-btn">
+                            <a
+                                href=""
+                                target="_blank"
+                                class="research-link"
+                                >View</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer></footer>
+        <footer>
+            <p>&copy; 2024 Maruf Shahriar. All rights reserved.</p>
+        </footer>
         <script
             src="https://code.jquery.com/jquery-2.1.1.min.js"
             crossorigin="anonymous"
@@ -224,17 +377,20 @@
                         behavior: "smooth",
                     });
                 });
-                document.querySelectorAll('nav ul li a').forEach(anchor => {
-                    anchor.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const target = document.querySelector(this.getAttribute('href'));
-                        const offset = document.querySelector('header').offsetHeight; // Navbar height
-                        window.scrollTo({
-                            top: target.offsetTop - offset,
-                            behavior: 'smooth'
-                        });
+            document.querySelectorAll("nav ul li a").forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(
+                        this.getAttribute("href")
+                    );
+                    const offset =
+                        document.querySelector("header").offsetHeight; // Navbar height
+                    window.scrollTo({
+                        top: target.offsetTop - offset,
+                        behavior: "smooth",
                     });
                 });
+            });
         </script>
     </body>
 </html>
