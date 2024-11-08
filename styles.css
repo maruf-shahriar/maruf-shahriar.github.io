@@ -1,17 +1,37 @@
 body {
     font-family: Playfair Display;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    width: 100%;
+    padding: 0px 0px;
+}
+section {
+    padding: 50px;
+    min-height: 70vh;
+}
+#about {
+    scroll-margin-top: 70px; 
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
-    padding: 0px 0px;
+    padding: 0 20px;
 }
 nav ul {
     display: flex;
     list-style: none;
     padding-right: 200px;
+    margin: 0; 
+    padding: 0;
 }
 nav ul li {
     margin-right: 20px;
@@ -24,7 +44,7 @@ nav ul li a {
 }
 .nav-title {
     font-family: Pacifico;
-    font-size: 30px;
+    font-size: 20px;
 }
 .nav-title-dec {
     background: 50% 100% / 50% 50% no-repeat
@@ -51,7 +71,7 @@ nav ul li a {
     background-color: #d7d1d1;
 }
 .profile-text {
-    padding: 0px 200px 0px 120px;
+    padding: 0px 200px 0px 100px;
 }
 .main-desc {
     font-size: 22px;
@@ -102,9 +122,9 @@ nav ul li a {
     color: black;
     font-size: 30px;
     display: inline-block;
-    padding: 10px;
+    padding: 4.5px 10px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     transition: all 0.3s ease;
 }
 .social-links a:hover {
@@ -262,4 +282,46 @@ nav ul li a {
         -o-transform: translateZ(-100px);
         transform: translateZ(-100px);
     }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #4e0303;
+}
+.card-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Abel;
+}
+ul {
+    padding-left: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+    font-family: Abel;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card-1 {
+    margin-left: 10px;
+    background-color: #1a2130;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 200px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 0px #4e0303;
 }

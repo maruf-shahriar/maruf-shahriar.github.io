@@ -35,8 +35,8 @@
                     <i>Maruf <span class="nav-title-dec">Shahriar</span></i>
                 </h3>
                 <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="education.html">Education</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -44,11 +44,10 @@
             </nav>
         </header>
         <main>
-            <section class="profile">
+            <section id="about" class="profile">
                 <div class="profile-text">
                     <h1 class="main-title">Hi, I'm Maruf Shahriar</h1>
                     <h2 class="main-subtitle">
-                        
                         <span class="cd-headline zoom">
                             <span class="cd-words-wrapper">
                                 <b class="is-visible">Web Developer</b>
@@ -74,7 +73,10 @@
                     </p>
                     <ul class="social-links">
                         <li>
-                            <a href="https://www.facebook.com/shahriar.maruf.75" target="_blank">
+                            <a
+                                href="https://www.facebook.com/shahriar.maruf.75"
+                                target="_blank"
+                            >
                                 <i class="fab fa-facebook"></i>
                             </a>
                         </li>
@@ -84,18 +86,27 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/maruf-shahriar-0054101b2/" target="_blank">
+                            <a
+                                href="https://www.linkedin.com/in/maruf-shahriar-0054101b2/"
+                                target="_blank"
+                            >
                                 <i class="fab fa-linkedin"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/maruf-shahriar" target="_blank">
+                            <a
+                                href="https://github.com/maruf-shahriar"
+                                target="_blank"
+                            >
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
                     </ul>
-                    <a href="https://drive.google.com/file/d/16-B5PasKBNt7NEah5zdpJje2P5QXZrgp/view?usp=sharing" target="_blank">
-                    <button class="btn-cv">MY RESUME</button>
+                    <a
+                        href="https://drive.google.com/file/d/16-B5PasKBNt7NEah5zdpJje2P5QXZrgp/view?usp=sharing"
+                        target="_blank"
+                    >
+                        <button class="btn-cv">MY RESUME</button>
                     </a>
                 </div>
                 <div class="profile-img">
@@ -106,9 +117,63 @@
                     />
                 </div>
             </section>
+            <section id="skills">
+                <h1 class="title">Skills</h1>
+                <div class="card">
+                    <div class="card-1">
+                        <h3 class="card-title">Programming Language</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C++</li>
+                            <li>JavaScript</li>
+                            <li>HTML/CSS</li>
+                            <li>PHP</li>
+                        </ul>
+                    </div>
+                    <div class="card-1">
+                        <h3 class="card-title">Frameworks & Libraries</h3>
+                        <ul>
+                            <li>React js</li>
+                            <li>Django</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                    </div>
+                    <div class="card-1">
+                        <h3 class="card-title">Tools & Platforms</h3>
+                        <ul>
+                            <li>VS Code</li>
+                            <li>Linux</li>
+                            <li>Google Colab</li>
+                            <li>Git & Github</li>
+                            <li>Mysql</li>
+                        </ul>
+                    </div>
+                    <div class="card-1">
+                        <h3 class="card-title">Machine Learning & AI</h3>
+                        <ul>
+                            <li>Model Development</li>
+                            <li>Data Preprocessing</li>
+                            <li>Deep Learning</li>
+                            <li>Neural Network</li>
+                        </ul>
+                    </div>
+                    <div class="card-1">
+                        <h3 class="card-title">Soft Skills</h3>
+                        <ul>
+                            <li>Problem Solving</li>
+                            <li>Quick Learning</li>
+                            <li>Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer></footer>
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js" crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-2.1.1.min.js"
+            crossorigin="anonymous"
+        ></script>
         <script>
             $(document).ready(function () {
                 var animationDelay = 2500; // duration for each word
@@ -145,6 +210,31 @@
                 // Initialize animation
                 animateHeadline($(".cd-headline"));
             });
+
+            document
+                .querySelector('a[href="#skills"]')
+                .addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const skillsSection = document.querySelector("#skills");
+                    window.scrollTo({
+                        top:
+                            skillsSection.offsetTop +
+                            skillsSection.offsetHeight -
+                            window.innerHeight,
+                        behavior: "smooth",
+                    });
+                });
+                document.querySelectorAll('nav ul li a').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        const offset = document.querySelector('header').offsetHeight; // Navbar height
+                        window.scrollTo({
+                            top: target.offsetTop - offset,
+                            behavior: 'smooth'
+                        });
+                    });
+                });
         </script>
     </body>
 </html>
