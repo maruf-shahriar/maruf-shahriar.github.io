@@ -8,6 +8,20 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&amp;display=swap"
             rel="stylesheet"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abel&family=Pacifico&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
         <title>Maruf's Bio</title>
         <script
             src="https://kit.fontawesome.com/841811b8a8.js"
@@ -15,91 +29,122 @@
         ></script>
     </head>
     <body>
-        <section class="container">
-            <section class="rightInfo">
-                <p id="header">
-                    Hi. I'm <span style="font-weight: 500">Maruf</span>
-                </p>
-                <div class="aboutInfo">
-                    <p>
-                        CSE student at<br />
-                        <a href="https://www.ewubd.edu/" target="_blank">
-                            <span style="font-weight: 500"
-                                >East West University</span
-                            ></a
-                        >.
+        <header>
+            <nav>
+                <h3 class="nav-title">
+                    <i>Maruf <span class="nav-title-dec">Shahriar</span></i>
+                </h3>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="profile">
+                <div class="profile-text">
+                    <h1 class="main-title">Hi, I'm Maruf Shahriar</h1>
+                    <h2 class="main-subtitle">
+                        
+                        <span class="cd-headline zoom">
+                            <span class="cd-words-wrapper">
+                                <b class="is-visible">Web Developer</b>
+                                <b>Researcher</b>
+                                <b>Tech Enthusiast</b>
+                            </span>
+                        </span>
+                    </h2>
+                    <p class="main-desc">
+                        I am a Computer Science graduate specializing in web
+                        development, with a strong focus on React.js. I build
+                        dynamic, user-friendly applications while ensuring
+                        performance and responsiveness. As a researcher and
+                        continuous learner, I explore innovative solutions to
+                        complex problems, staying updated with the latest
+                        technologies. My interests also extend to Networking and
+                        Cybersecurity, aiming to integrate secure practices into
+                        development. I thrive in collaborative environments,
+                        valuing teamwork and communication. Driven by curiosity
+                        and a passion for growth, I’m committed to delivering
+                        impactful projects and advancing my skills in the tech
+                        industry.
                     </p>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.facebook.com/shahriar.maruf.75" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:maruf.ewucse@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/maruf-shahriar-0054101b2/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/maruf-shahriar" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="https://drive.google.com/file/d/16-B5PasKBNt7NEah5zdpJje2P5QXZrgp/view?usp=sharing" target="_blank">
+                    <button class="btn-cv">MY RESUME</button>
+                    </a>
                 </div>
-                <div class="links">
-                    <a href="assets/Maruf Shahriar_CV.pdf" target="_blank"
-                        ><button>View Resume</button></a
-                    >
-                    <div class="icons">
-                        <a
-                            href="https://www.linkedin.com/in/maruf-shahriar-0054101b2/"
-                            target="_blank"
-                            ><i
-                                class="fab fa-linkedin fa-3x"
-                                aria-hidden="true"
-                            ></i
-                        ></a>
-                        <a
-                            href="https://github.com/maruf-shahriar"
-                            target="_blank"
-                            ><i
-                                class="fab fa-github fa-3x"
-                                aria-hidden="true"
-                            ></i
-                        ></a>
-
-                        <a href="mailto:maruf.ewucse@gmail.com" id="emailLink"
-                            ><i
-                                class="fas fa-envelope fa-3x"
-                                aria-hidden="true"
-                            ></i
-                        ></a>
-                    </div>
+                <div class="profile-img">
+                    <img
+                        src="assets/m3.png"
+                        alt="Maruf Shahriar"
+                        class="main-img"
+                    />
                 </div>
             </section>
-
-            <section class="leftImage">
-                <img id="image" src="assets/pic.jpg" alt="No Photo Available" />
-            </section>
-        </section>
-        <div class="notification" id="copyNotification" style="display: none">
-            Email address copied to clipboard!
-        </div>
+        </main>
+        <footer></footer>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js" crossorigin="anonymous"></script>
         <script>
-            document
-                .getElementById("emailLink")
-                .addEventListener("click", function (event) {
-                    event.preventDefault(); // Prevent the default mailto link behavior
-                    const email = this.getAttribute("href").replace(
-                        "mailto:",
-                        ""
-                    ); // Extract the email address
-                    copyToClipboard(email); // Call the copyToClipboard function to copy the email address
-                });
+            $(document).ready(function () {
+                var animationDelay = 2500; // duration for each word
 
-            // Function to copy text to the clipboard
-            function copyToClipboard(text) {
-                const textarea = document.createElement("textarea");
-                textarea.value = text;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand("copy");
-                document.body.removeChild(textarea);
+                function animateHeadline($headlines) {
+                    $headlines.each(function () {
+                        var headline = $(this);
+                        // trigger animation
+                        setTimeout(function () {
+                            hideWord(headline.find(".is-visible"));
+                        }, animationDelay);
+                    });
+                }
 
-                // Show the notification message
-                const copyNotification =
-                    document.getElementById("copyNotification");
-                copyNotification.style.display = "block";
+                function hideWord($word) {
+                    var nextWord = takeNext($word);
+                    switchWord($word, nextWord);
+                    setTimeout(function () {
+                        hideWord(nextWord);
+                    }, animationDelay);
+                }
 
-                // Hide the notification after a brief delay (e.g., 2 seconds)
-                setTimeout(function () {
-                    copyNotification.style.display = "none";
-                }, 2000); // 2000 milliseconds = 2 seconds
-            }
+                function takeNext($word) {
+                    return !$word.is(":last-child")
+                        ? $word.next()
+                        : $word.parent().children().eq(0);
+                }
+
+                function switchWord($oldWord, $newWord) {
+                    $oldWord.removeClass("is-visible").addClass("is-hidden");
+                    $newWord.removeClass("is-hidden").addClass("is-visible");
+                }
+
+                // Initialize animation
+                animateHeadline($(".cd-headline"));
+            });
         </script>
     </body>
 </html>
