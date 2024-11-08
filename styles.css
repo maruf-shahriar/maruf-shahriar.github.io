@@ -1,7 +1,7 @@
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
-    background-color: #141b1c;
+    background-color: #e4e9e9;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 
 #header {
     font-size: 60px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .aboutInfo {
@@ -31,12 +31,12 @@ body {
     max-width: 70%;
     margin-top: -1em;
     margin-bottom: -1em;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .icons {
     margin-top: 3em;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .leftImage {
@@ -56,8 +56,8 @@ button {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 25px;
-    color: black;
-    background-color: white;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     padding: 0.4em;
     padding-left: 1.5em;
     padding-right: 1.5em;
