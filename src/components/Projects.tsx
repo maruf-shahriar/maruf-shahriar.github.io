@@ -1,31 +1,34 @@
 
 const projects = [
   {
-    title: "Project 1",
-    description: "Description of project 1",
-    tech: ["React", "Node.js", "MongoDB"],
-    github: "#",
-    demo: "#",
+    title: "Learning Management system",
+    description: "Designed an e-learning platform with multimedia content, automated grading, instant feedback, and interactive discussion forums. Implemented secure user authentication for personalized access.",
+    tech: ["React", "Django", "Tailwind CSS"],
+    image: "/LearnCS.png",
+    github: "https://github.com/maruf-shahriar/LearnCS-Frontend",
+    demo: "https://learncs-app.web.app/",
   },
   {
-    title: "Project 2",
-    description: "Description of project 2",
-    tech: ["Next.js", "TypeScript", "Tailwind"],
-    github: "#",
-    demo: "#",
+    title: "Interview Preparation Website",
+    description: "A social media platform where users create accounts, share interview experiences and tips, and engage by commenting and liking posts.",
+    tech: ["React", "Django Rest framework", "Tailwind CSS"],
+    image: "/InterviewApp.png",
+    github: "https://github.com/maruf-shahriar/InterviewPrepApp-Frontend",
+    demo: "https://interviewprep-app.web.app/",
   },
   {
-    title: "Project 3",
-    description: "Description of project 3",
-    tech: ["React", "Firebase", "Material-UI"],
-    github: "#",
+    title: "Public key Infrastructure Implementation",
+    description: "Built a web and DNS server to host multiple websites. Configured SSL certificates for secure connections and implemented robust security measures to protect the server from potential attacks.",
+    tech: ["Ubuntu", "Apache Web Serve", "Bind9", "Snort"],
+    image: "/PublicKey.png",
+    github: "https://github.com/maruf-shahriar/Public-Key-Infrastructure-Implementation",
     demo: "#",
   },
 ];
 
 const Projects = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-transparent to-purple-900/20" id="projects">
+    <section className="py-20 " id="projects">
       <div className="container px-4">
         <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text">
           Featured Projects
@@ -36,7 +39,13 @@ const Projects = () => {
               key={project.title}
               className="rounded-xl backdrop-blur-xl bg-white/5 border border-white/10 overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
             >
-              <div className="h-48 bg-gradient-to-br from-purple-500/20 to-blue-500/20" />
+              <div className="h-48 overflow-hidden">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+  />
+</div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-400 mb-4">{project.description}</p>

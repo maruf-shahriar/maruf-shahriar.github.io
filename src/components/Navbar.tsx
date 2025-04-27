@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <h1 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text">
-            MS
+            Maruf Shahriar
           </h1>
           <div className="hidden md:flex space-x-4">
             {[

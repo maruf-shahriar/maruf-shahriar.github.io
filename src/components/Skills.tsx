@@ -5,7 +5,9 @@ import {
   Database,
   Code,
   Layout,
-  Users
+  Users,
+  Wrench,
+
 } from "lucide-react";
 
 const skills = {
@@ -14,25 +16,25 @@ const skills = {
     "CSS",
     "JavaScript",
     "React",
-    "TypeScript",
   ],
-  backend: [
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "PostgreSQL",
+  Tools: [
+    "VS Code",
+    "Git/GitHub",
+    "Postman",
+    "Linux",
+    "Google Colab"
   ],
   programmingLanguages: [
     "JavaScript",
-    "TypeScript",
+    "Go",
     "Python",
-    "Java",
+    "C++",
+    "HTML/CSS",
   ],
   frameworksLibraries: [
     "React",
-    "Next.js",
+    "Django",
     "Tailwind CSS",
-    "Material-UI",
   ],
   softSkills: [
     "Problem Solving",
@@ -44,7 +46,7 @@ const skills = {
 
 const iconMap = {
   frontend: <Laptop className="w-8 h-8 text-purple-400" />,
-  backend: <Database className="w-8 h-8 text-blue-400" />,
+  tools: <Wrench className="w-8 h-8 text-blue-400" />,
   programmingLanguages: <Code className="w-8 h-8 text-green-400" />,
   frameworksLibraries: <Layout className="w-8 h-8 text-orange-400" />,
   softSkills: <Users className="w-8 h-8 text-pink-400" />,
@@ -79,10 +81,10 @@ const Skills = () => {
           Skills & Expertise
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <SkillCategory title="Frontend Development" items={skills.frontend} icon={iconMap.frontend} />
-          <SkillCategory title="Backend Development" items={skills.backend} icon={iconMap.backend} />
+          {/* <SkillCategory title="Frontend Development" items={skills.frontend} icon={iconMap.frontend} /> */}
           <SkillCategory title="Programming Languages" items={skills.programmingLanguages} icon={iconMap.programmingLanguages} />
           <SkillCategory title="Frameworks & Libraries" items={skills.frameworksLibraries} icon={iconMap.frameworksLibraries} />
+          <SkillCategory title="Tools & Platforms" items={skills.Tools} icon={iconMap.tools} />
           <SkillCategory title="Soft Skills" items={skills.softSkills} icon={iconMap.softSkills} />
         </div>
       </div>
